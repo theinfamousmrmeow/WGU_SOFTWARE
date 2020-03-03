@@ -11,8 +11,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <HBox prefHeight="100.0" prefWidth="608.0">
          <children>
@@ -23,11 +22,11 @@
             </Label>
          </children>
       </HBox>
-      <HBox prefHeight="379.0" prefWidth="879.0">
+      <HBox alignment="CENTER" prefHeight="379.0" prefWidth="879.0" spacing="120.0">
          <children>
             <VBox>
                <children>
-                  <HBox>
+                  <HBox prefHeight="49.0" prefWidth="320.0" style=": 5;">
                      <children>
                         <Label prefHeight="39.0" prefWidth="78.0" text="Parts">
                            <font>
@@ -38,11 +37,14 @@
                         <TextField prefHeight="25.0" prefWidth="184.0" />
                      </children>
                   </HBox>
-                  <TableView prefHeight="312.0" prefWidth="290.0">
+                  <TableView prefHeight="312.0" prefWidth="290.0" style="-fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: 0x00000;">
                     <columns>
                       <TableColumn prefWidth="75.0" text="Part ID" />
                       <TableColumn prefWidth="75.0" text="Part Name" />
                     </columns>
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
                   </TableView>
                   <HBox prefHeight="25.0" prefWidth="243.0" spacing="16.0">
                      <children>
@@ -59,7 +61,7 @@
          <children>
             <BorderPane prefHeight="53.0" prefWidth="879.0">
                <right>
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="17.0" prefWidth="100.0" text="Button" BorderPane.alignment="CENTER" />
+                  <Button fx:id="btnExit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#blowUp" onDragDetected="#blowUp2" prefHeight="17.0" prefWidth="100.0" text="Exit" BorderPane.alignment="CENTER" />
                </right>
                <padding>
                   <Insets right="32.0" />
