@@ -1,8 +1,8 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
-import java.awt.*;
 
 public class Controller {
 
@@ -10,13 +10,9 @@ public class Controller {
     private Button btnExit;
 
     @FXML
-    public static void blowUp (){
-
+    public void blowUp (){
+        btnExit.setVisible(false);
     }
 
-    @FXML
-    public static void blowUp2 (){
-        //btnExit.remove(
-    }
 
 }
