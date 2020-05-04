@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="1207.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="1207.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerMain">
    <children>
       <HBox prefHeight="100.0" prefWidth="608.0">
          <children>
@@ -33,7 +33,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Button mnemonicParsing="false" text="Search" />
+                        <Button fx:id="btnSearchPart" mnemonicParsing="false" text="Search" />
                         <TextField prefHeight="25.0" prefWidth="184.0" />
                      </children>
                   </HBox>
@@ -47,9 +47,9 @@
                   </TableView>
                   <HBox prefHeight="25.0" prefWidth="243.0" spacing="16.0">
                      <children>
-                        <Button alignment="BASELINE_RIGHT" mnemonicParsing="false" text="Add" />
-                        <Button mnemonicParsing="false" text="Modify" />
-                        <Button alignment="BASELINE_RIGHT" mnemonicParsing="false" text="Delete" textAlignment="CENTER" />
+                        <Button fx:id="btnAddPart" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#showAddPartScreen" text="Add" />
+                        <Button fx:id="btnModifyPart" mnemonicParsing="false" onAction="#showModifyPartScreen" text="Modify" />
+                        <Button fx:id="btnDeletePart" alignment="BASELINE_RIGHT" mnemonicParsing="false" text="Delete" textAlignment="CENTER" />
                      </children>
                   </HBox>
                </children>
@@ -63,26 +63,23 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Button mnemonicParsing="false" text="Search" />
+                        <Button fx:id="btnSearchProduct" mnemonicParsing="false" text="Search" />
                         <TextField prefHeight="25.0" prefWidth="184.0" />
                      </children>
                   </HBox>
                   <TableView prefHeight="292.0" prefWidth="546.0" style="-fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: 0x00000;">
                      <columns>
-                        <TableColumn prefWidth="75.0" text="Part ID" />
-                        <TableColumn prefWidth="75.0" text="Part Name" />
-                        <TableColumn prefWidth="75.0" text="Inventory Level" />
-                        <TableColumn prefWidth="75.0" text="Cost/Price per Unit" />
+                        <TableColumn prefWidth="137.0" text="Product ID" />
+                        <TableColumn prefWidth="123.0" text="Product Name" />
+                        <TableColumn prefWidth="149.0" text="Inventory Level" />
+                        <TableColumn prefWidth="132.0" text="Price per Unit" />
                      </columns>
-                     <padding>
-                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
-                     </padding>
                   </TableView>
                   <HBox prefHeight="25.0" prefWidth="243.0" spacing="16.0">
                      <children>
-                        <Button alignment="BASELINE_RIGHT" mnemonicParsing="false" text="Add" />
-                        <Button mnemonicParsing="false" text="Modify" />
-                        <Button alignment="BASELINE_RIGHT" mnemonicParsing="false" text="Delete" textAlignment="CENTER" />
+                        <Button fx:id="btnAddProduct" alignment="BASELINE_RIGHT" mnemonicParsing="false" onAction="#showAddProductScreen" text="Add" />
+                        <Button fx:id="btnModifyProduct" mnemonicParsing="false" onAction="#showModifyProductScreen" text="Modify" />
+                        <Button fx:id="btnDeleteProduct" alignment="BASELINE_RIGHT" mnemonicParsing="false" text="Delete" textAlignment="CENTER" />
                      </children>
                   </HBox>
                </children>

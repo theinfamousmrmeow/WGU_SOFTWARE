@@ -169,8 +169,6 @@ package sample;
 
  •  ensuring that a product must have a name, price, and inventory level (default 0)
 
-
-
  K.  Demonstrate professional communication in the content and presentation of your submission.
  */
 
